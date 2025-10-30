@@ -6,20 +6,20 @@
 
 int main(int argc, char *argv[]) 
 {
-	int i, average;
-	int sum = 0;
-	int grade[SIZE];
-	
+	int i;
+	int a[SIZE] = {1,2,3,4,5};
+	int b[SIZE] = {1,2,3,4,5};
+	int flag_same = 1;
 	
 	for(i=0;i<SIZE;i++)
 	{
-		printf("Enter the score : ");
-		scanf("%d", &grade[i]);
-		sum = sum + grade[i];
+		if (a[i] != b[i])
+		{
+			printf("%i-th element is diff.\n",i);
+			flag_same = 0;
+		}
 	}
 	
-	average = sum / SIZE;
-	printf("average : %d\n", average);
-
+	printf("Are a and b the same? %i\n", flag_same);
 	return 0;
 }
